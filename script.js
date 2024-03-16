@@ -1,4 +1,3 @@
-// v1
 function countContainingRanges(input) {
     const pairs = input.split('\n');
     console.log(pairs);
@@ -11,10 +10,6 @@ function countContainingRanges(input) {
 
         const [start1, end1] = range1.split('-').map(Number);
         const [start2, end2] = range2.split('-').map(Number);
-
-        // if ((start1 <= start2 && end1 >= end2) || (start2 <= start1 && end2 >= end1)) {
-        //     containingCount++;
-        // }
         
         if ((start1 >= start2 && end1 <= end2) || (start2 >= start1 && end2 <= end1)) {
             containingCount++;
@@ -29,6 +24,7 @@ function countContainingRanges(input) {
     return { containingCount, overlappingCount };
 }
 
+// the functionality has been tested with a larger amount of data.
 const sampleInputData = [
     '2-4,6-8',
     '2-3,4-5',
